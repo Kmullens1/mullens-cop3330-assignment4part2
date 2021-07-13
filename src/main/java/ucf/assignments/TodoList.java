@@ -8,7 +8,6 @@ package ucf.assignments;
 public class TodoList {
 
     public static void main(String[] args) {
-        //
         //	The application shall manage a single list of items
             //The list shall have the capacity to store at least 100 unique items
         //  An item shall have a description
