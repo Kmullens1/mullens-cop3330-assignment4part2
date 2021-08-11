@@ -2,22 +2,22 @@
 'https://plantuml.com/class-diagram
 
 class TodoList {
-    main()
-    start()
+    +main()
+    +start()
 }
 
 class Controller{
-    taxDescriptionTextBox
-    chooseDueDate: DatePicker
+    +taxDescriptionTextBox
+    +chooseDueDate: DatePicker
 
-    saveButtonPressed()
-    loadButtonPressed()
-    displayCompleteBoxChecked()
-    displayIncompleteBoxChecked()
-    addTaskButtonPressed()
-    deleteTaskButtonPressed()
-    createListButtonPressed()
-    helpButtonPressed()
+    -saveButtonPressed()
+    -loadButtonPressed()
+    -displayCompleteBoxChecked()
+    -displayIncompleteBoxChecked()
+    -addTaskButtonPressed()
+    -deleteTaskButtonPressed()
+    -createListButtonPressed()
+    -helpButtonPressed()
 }
 
 javafx.Application <|-- TodoList

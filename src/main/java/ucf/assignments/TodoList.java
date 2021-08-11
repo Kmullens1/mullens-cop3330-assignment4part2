@@ -14,6 +14,7 @@ public class TodoList extends Application {
         launch(args);
     }
 
+    //Start Method
     @Override
     public void start(Stage primaryStage) {
         try {

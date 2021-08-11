@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-//FIXME do I need the above line? It was in the professor's calculator code
 
 public class TodoListController {
     @FXML
