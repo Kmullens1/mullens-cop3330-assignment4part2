@@ -7,6 +7,17 @@ class TodoList {
 }
 
 class Controller{
+    taxDescriptionTextBox
+    chooseDueDate: DatePicker
+
+    saveButtonPressed()
+    loadButtonPressed()
+    displayCompleteBoxChecked()
+    displayIncompleteBoxChecked()
+    addTaskButtonPressed()
+    deleteTaskButtonPressed()
+    createListButtonPressed()
+    helpButtonPressed()
 }
 
 javafx.Application <|-- TodoList
