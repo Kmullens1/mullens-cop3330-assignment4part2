@@ -4,10 +4,16 @@
  */
 package ucf.assignments;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class TodoListController {
     @FXML
@@ -17,10 +23,22 @@ public class TodoListController {
     private TextField taskDescriptionTextBox;
 
     @FXML
+    private TableView<?> entireTodoList;
+
+    //ObservableList
+    @FXML
     public void saveButtonPressed(ActionEvent actionEvent) {
         //file chooser??? -- if so, another .fxml page is needed due to file chooser pop-up
         //option to name file?
         //send data to save location
+
+        SaveButton save = new SaveButton();
+        System.out.print("Where would you like to save your file? ");
+        //FixMe - Take file location input
+        String fileName = "C:\\Users\\kmull\\Desktop\\Keri's OOP Class\\SceneBuilder Stuff\\SavedTodoList";
+        //FIXME - Somehow pass list data to newFile function
+        save.newFile(fileName, "Hello for now");
+
     }
 
     @FXML
@@ -51,10 +69,18 @@ public class TodoListController {
 
     @FXML
     public void addTaskButtonPressed(ActionEvent actionEvent) {
-        //new row is added (printed out?)
-        //Ask for task description
-        //Ask for due date (date picker??)
-        //print description and due date
+        // select which data we are adding
+            // ask for all the information below
+            // due date, description, completion status
+        // Item data = extract_data()
+
+        // we need to add it to a global list (this acts as a storage device)
+        // i.e ObservableList<>
+        // add_new_data(data);
+
+        // once that is done, decide if you want to clear what the user previously entered
+
+        // repopulate the display (kinda refresh the table)
     }
 
     @FXML
@@ -71,9 +97,32 @@ public class TodoListController {
         //1st task and due date are requested?? or is initial new list blank?
     }
 
+
     @FXML
     public void helpButtonPressed(ActionEvent actionEvent) {
         //pop up window - new .fxml file??
         //dedication to Rey
     }
+
+    //FIXME - Not sure if I need this code or not...
+    /*
+    //Override????
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        TableColumn done = new TableColumn("Done:");
+        TableColumn name = new TableColumn("Due Date:");
+        TableColumn task = new TableColumn("Task:");
+
+        entireTodoList.getColumns().addAll(done, name, task);
+    }
+     */
 }
+
+
+
+
+
+
+
+
+

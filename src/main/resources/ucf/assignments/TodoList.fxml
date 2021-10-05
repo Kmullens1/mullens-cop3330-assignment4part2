@@ -5,17 +5,15 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/16"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ucf.assignments.TodoListController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.TodoListController">
    <children>
       <GridPane alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
         <columnConstraints>
@@ -26,36 +24,33 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.59998168945312" minHeight="10.0" prefHeight="26.999993896484384" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="81.4" minHeight="10.0" prefHeight="36.600012207031256" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="110.19998779296876" minHeight="10.0" prefHeight="82.19998779296876" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="94.39999999999998" minHeight="10.0" prefHeight="76.20005187988284" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="104.20000305175779" minHeight="10.0" prefHeight="67.19994812011714" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <DatePicker fx:id="chooseDueDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="taskDescriptionTextBox" prefWidth="227.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-            <TextField prefWidth="227.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-            <TextField prefWidth="227.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-            <TextField prefWidth="227.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-            <Label text="Due Date" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Task" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <DatePicker fx:id="chooseDueDate" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <TextField fx:id="taskDescriptionTextBox" prefWidth="227.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Label text="Task:" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
             <Button mnemonicParsing="false" onAction="#saveButtonPressed" text="Save" />
             <Button mnemonicParsing="false" onAction="#loadButtonPressed" text="Load" GridPane.halignment="RIGHT" />
             <CheckBox mnemonicParsing="false" onAction="#displayCompleteBoxChecked" text="Display Complete" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
             <CheckBox mnemonicParsing="false" onAction="#displayIncompleteBoxChecked" text="Display Incomplete" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
             <Button mnemonicParsing="false" onAction="#addTaskButtonPressed" text="Add Task" GridPane.rowIndex="6" />
             <Button mnemonicParsing="false" onAction="#deleteTaskButtonPressed" text="Delete Task" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <CheckBox mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <CheckBox mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <CheckBox mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <CheckBox mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createListButtonPressed" text="Create New List" GridPane.columnIndex="3" GridPane.rowIndex="6" />
             <Button mnemonicParsing="false" onAction="#helpButtonPressed" text="Help" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+            <TableView prefHeight="41.0" prefWidth="78.0" GridPane.columnSpan="4" GridPane.rowIndex="3" GridPane.rowSpan="3">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Done:" />
+                <TableColumn prefWidth="75.0" text="Due Date:" />
+                  <TableColumn prefWidth="75.0" text="Task:" />
+              </columns>
+            </TableView>
+            <Label text="Due Date:" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
          </children>
          <padding>
             <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
