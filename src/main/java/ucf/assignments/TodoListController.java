@@ -73,7 +73,7 @@ public class TodoListController {
             // ask for all the information below
             // due date, description, completion status
         // Item data = extract_data()
-
+//FIXME - AddTask needs to modify the Task Object (Which is an array of object task)
         // we need to add it to a global list (this acts as a storage device)
         // i.e ObservableList<>
         // add_new_data(data);
@@ -85,6 +85,7 @@ public class TodoListController {
 
     @FXML
     public void deleteTaskButtonPressed(ActionEvent actionEvent) {
+        //FIXME - needs to modify the task object and remove value from observable list
         //ask which row to delete?
             //OR delete row that is selected...
         //select that row and eliminate it
@@ -93,8 +94,9 @@ public class TodoListController {
 
     @FXML
     public void createListButtonPressed(ActionEvent actionEvent) {
-        //old list is reset
-        //1st task and due date are requested?? or is initial new list blank?
+        //old list is reset to blank
+        //FIXME - entire observable list is erased
+
     }
 
 
