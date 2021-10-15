@@ -7,11 +7,16 @@ package ucf.assignments;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -101,9 +106,14 @@ public class TodoListController {
 
 
     @FXML
-    public void helpButtonPressed(ActionEvent actionEvent) {
+    public void helpButtonPressed(ActionEvent actionEvent) throws IOException {
         //pop up window - new .fxml file??
         //dedication to Rey
+        Parent part = FXMLLoader.load(getClass().getResource("src/main/resources/ucf/assignments/Help Payne.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.show();
     }
 
     //FIXME - Not sure if I need this code or not...
