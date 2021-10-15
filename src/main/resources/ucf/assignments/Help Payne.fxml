@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="199.79999389648438" minHeight="10.0" prefHeight="186.9999755859375" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="291.0" minHeight="10.0" prefHeight="165.79996337890623" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="121.80002441406248" minHeight="0.0" prefHeight="34.60003662109375" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField alignment="CENTER" text="This Help Tab is dedicated to Rey! :D" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+      <TextArea prefHeight="200.0" prefWidth="200.0" text="                                                                                  &#10;                                                                                    HELP&#10;   - Save: This button will save your work to a file location of your choosing. First type the desired file &#10;               location in the adjacent box, and then press the button.&#10;&#10;   - Load: This button will load a file from a location of your choosing. First type the desired file location in &#10;               the adjacent box, and then press the button.&#10;&#10;   - Create New List: This button will erase the list that is currently displayed and allow you to begin a new &#10;                list from scratch.&#10;&#10;   - Add Task: Type the description of the task and select the due date then click add to append your new  &#10;                task to the bottom of the task payne.&#10;      *Due Date: Either type the desired date, or you may select the little grid button. This will allow you to &#10;                choose a date from the calendar.&#10;      *Task: Type a description of your task into the task textbox. Once you press the add task button, your&#10;                task will be added to the end of the current list.&#10;&#10;   - Delete Task: Select a task from the task payne and then press the delete button to erase that entry.&#10;" GridPane.columnSpan="2" GridPane.rowSpan="2" />
+   </children>
+</GridPane>
