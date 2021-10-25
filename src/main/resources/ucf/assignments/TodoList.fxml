@@ -43,16 +43,19 @@
                 <Label text="Task:" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
                 <Button mnemonicParsing="false" onAction="#saveButtonPressed" text="Save" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets top="12.0" />
+                  <Insets />
                </GridPane.margin></Button>
-                <Button mnemonicParsing="false" onAction="#loadButtonPressed" text="Load" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM" />
-                <CheckBox mnemonicParsing="false" onAction="#displayCompleteBoxChecked" text="Display Complete" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                <Button mnemonicParsing="false" onAction="#loadButtonPressed" text="Load" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="8.0" />
+               </GridPane.margin></Button>
+                <CheckBox mnemonicParsing="false" onAction="#displayCompleteBoxChecked" text="Display Complete" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                     <GridPane.margin>
-                        <Insets right="8.0" />
+                        <Insets bottom="5.0" left="40.0" />
                     </GridPane.margin></CheckBox>
-                <CheckBox mnemonicParsing="false" onAction="#displayIncompleteBoxChecked" prefWidth="134.0" text="Display Incomplete" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                <CheckBox mnemonicParsing="false" onAction="#displayIncompleteBoxChecked" prefWidth="134.0" text="Display Incomplete" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
                     <GridPane.margin>
-                        <Insets left="8.0" />
+                        <Insets bottom="5.0" right="-10.0" />
                     </GridPane.margin></CheckBox>
                 <Button mnemonicParsing="false" onAction="#addTaskButtonPressed" text="Add Task" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <GridPane.margin>
@@ -74,7 +77,7 @@
                 </TableView>
             <TextField GridPane.columnSpan="3">
                <GridPane.margin>
-                  <Insets left="50.0" />
+                  <Insets bottom="10.0" left="50.0" />
                </GridPane.margin>
             </TextField>
             </children>
