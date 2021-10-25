@@ -109,7 +109,7 @@ public class TodoListController {
     public void helpButtonPressed(ActionEvent actionEvent) throws IOException {
         //pop up window - new .fxml file??
         //dedication to Rey
-        Parent part = FXMLLoader.load(getClass().getResource("src/main/resources/ucf/assignments/Help Payne.fxml"));
+        Parent part = FXMLLoader.load(getClass().getResource("Help Payne.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(part);
         stage.setScene(scene);
