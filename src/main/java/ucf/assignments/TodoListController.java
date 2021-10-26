@@ -38,7 +38,6 @@ public class TodoListController {
         //send data to save location
 
         SaveButton save = new SaveButton();
-        System.out.print("Where would you like to save your file? ");
         //FixMe - Take file location input
         String fileName = "C:\\Users\\kmull\\Desktop\\Keri's OOP Class\\SceneBuilder Stuff\\SavedTodoList";
         //FIXME - Somehow pass list data to newFile function
@@ -107,7 +106,7 @@ public class TodoListController {
 
     @FXML
     public void helpButtonPressed(ActionEvent actionEvent) throws IOException {
-        //pop up window - new .fxml file??
+        //pop up window - new .fxml file
         //dedication to Rey
         Parent part = FXMLLoader.load(getClass().getResource("Help Payne.fxml"));
         Stage stage = new Stage();
