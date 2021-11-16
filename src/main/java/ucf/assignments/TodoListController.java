@@ -15,33 +15,32 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.Objects;
 
 public class TodoListController {
     @FXML
     private DatePicker chooseDueDate;
 
     @FXML
-    private TextField taskDescriptionTextBox;
+    private TextField taskTextBox;
 
     @FXML
-    private TableView<?> entireTodoList;
+    private TableView<String> entireTodoList;
+
+    @FXML
+    private TextField fileLocation;
 
     //ObservableList
     @FXML
     public void saveButtonPressed(ActionEvent actionEvent) {
-        //file chooser??? -- if so, another .fxml page is needed due to file chooser pop-up
         //option to name file?
         //send data to save location
 
-        SaveButton save = new SaveButton();
-        //FixMe - Take file location input
-        String fileName = "C:\\Users\\kmull\\Desktop\\Keri's OOP Class\\SceneBuilder Stuff\\SavedTodoList";
-        //FIXME - Somehow pass list data to newFile function
-        save.newFile(fileName, "Hello for now");
+
+    }
+
+    private void saveToList(){
 
     }
 
@@ -73,18 +72,23 @@ public class TodoListController {
 
     @FXML
     public void addTaskButtonPressed(ActionEvent actionEvent) {
-        // select which data we are adding
-            // ask for all the information below
-            // due date, description, completion status
-        // Item data = extract_data()
-//FIXME - AddTask needs to modify the Task Object (Which is an array of object task)
+        //FIXME - AddTask needs to modify the Task Object (Which is an array of object task)
         // we need to add it to a global list (this acts as a storage device)
         // i.e ObservableList<>
         // add_new_data(data);
 
-        // once that is done, decide if you want to clear what the user previously entered
+        // Once input is saved, reset date and description boxes to empty
 
-        // repopulate the display (kinda refresh the table)
+
+        //TableColumn<task, String> idColumn = new TableColumn<Integer, String>("ID");
+        //entireTodoList.getColumns().add(0, task);
+
+        fileLocation.setText(taskTextBox.getText() + chooseDueDate.getValue().getMonthValue() + "/"
+                + chooseDueDate.getValue().getDayOfMonth() + "/" + chooseDueDate.getValue().getYear());
+        taskTextBox.clear();
+        chooseDueDate.setValue(null);
+
+
     }
 
     @FXML
@@ -99,7 +103,7 @@ public class TodoListController {
     @FXML
     public void createListButtonPressed(ActionEvent actionEvent) {
         //old list is reset to blank
-        //FIXME - entire observable list is erased
+
 
     }
 
@@ -108,25 +112,13 @@ public class TodoListController {
     public void helpButtonPressed(ActionEvent actionEvent) throws IOException {
         //pop up window - new .fxml file
         //dedication to Rey
-        Parent part = FXMLLoader.load(getClass().getResource("Help Payne.fxml"));
+        Parent part = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Help Payne.fxml")));
         Stage stage = new Stage();
         Scene scene = new Scene(part);
         stage.setScene(scene);
         stage.show();
     }
 
-    //FIXME - Not sure if I need this code or not...
-    /*
-    //Override????
-    public void initialize(URL url, ResourceBundle rb)
-    {
-        TableColumn done = new TableColumn("Done:");
-        TableColumn name = new TableColumn("Due Date:");
-        TableColumn task = new TableColumn("Task:");
-
-        entireTodoList.getColumns().addAll(done, name, task);
-    }
-     */
 }
 
 

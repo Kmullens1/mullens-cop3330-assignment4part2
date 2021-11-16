@@ -37,7 +37,7 @@
             <Insets right="8.0" />
          </GridPane.margin>
       </DatePicker>
-      <TextField fx:id="taskDescriptionTextBox" prefWidth="227.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <TextField fx:id="taskTextBox" prefWidth="227.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.valignment="TOP" />
       <Label text="Task:" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
       <Button mnemonicParsing="false" onAction="#saveButtonPressed" text="Save" GridPane.valignment="TOP">
          <GridPane.margin>
@@ -79,7 +79,7 @@
             <TableColumn prefWidth="75.0" text="Task:" />
          </columns>
       </TableView>
-      <TextField GridPane.columnSpan="3">
+      <TextField fx:id="fileLocation" promptText="Enter address of desired file location" GridPane.columnSpan="3">
          <GridPane.margin>
             <Insets bottom="10.0" left="50.0" />
          </GridPane.margin>
