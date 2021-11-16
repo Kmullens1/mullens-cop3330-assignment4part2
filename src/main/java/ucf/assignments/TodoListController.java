@@ -11,7 +11,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -26,7 +25,7 @@ public class TodoListController {
     private TextField taskTextBox;
 
     @FXML
-    private TableView<String> entireTodoList;
+    private TableView<?> entireTodoList;
 
     @FXML
     private TextField fileLocation;
@@ -40,9 +39,6 @@ public class TodoListController {
 
     }
 
-    private void saveToList(){
-
-    }
 
     @FXML
     public void loadButtonPressed(ActionEvent actionEvent) {
