@@ -4,6 +4,7 @@
  */
 package ucf.assignments;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import javax.swing.table.TableColumn;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -25,7 +28,7 @@ public class TodoListController {
     private TextField taskTextBox;
 
     @FXML
-    private TableView<?> entireTodoList;
+    private TableView<Task> entireTodoList;
 
     @FXML
     private TextField fileLocation;
@@ -76,11 +79,30 @@ public class TodoListController {
         // Once input is saved, reset date and description boxes to empty
 
 
-        //TableColumn<task, String> idColumn = new TableColumn<Integer, String>("ID");
-        //entireTodoList.getColumns().add(0, task);
+        TableView table = new TableView<Task>();
+        TableColumn dueDateColumn = new TableColumn();
 
-        fileLocation.setText(taskTextBox.getText() + chooseDueDate.getValue().getMonthValue() + "/"
+        //fixme - Test - Create a new task and try to save it in the correct location
+        Task newTask = new Task();
+        newTask.completionStatus = true;
+        newTask.taskDescription = "Hello";
+        newTask.dueDate = 1;
+
+        //fixme - create an observable list and try to save the task to it
+        ObservableList<Task> newTodoList = FXCollections.observableArrayList();
+        newTodoList.add(0, newTask);
+
+        //fixme - try to add observable list into the tableview
+        entireTodoList.setItems(newTodoList);
+
+        //fixme - save stuff into the textbox for now to figure out how things work
+        fileLocation.setText(taskTextBox.getText() + " " + chooseDueDate.getValue().getMonthValue() + "/"
                 + chooseDueDate.getValue().getDayOfMonth() + "/" + chooseDueDate.getValue().getYear());
+
+
+       // fileLocation.setText(newTask.taskDescription);
+
+        //clear out the user input after submission to be ready for next task submission
         taskTextBox.clear();
         chooseDueDate.setValue(null);
 

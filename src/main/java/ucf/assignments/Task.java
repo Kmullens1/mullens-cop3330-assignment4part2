@@ -2,10 +2,18 @@ package ucf.assignments;
 
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 
 public class Task {
 
-    private SimpleBooleanProperty done;
+    boolean completionStatus;
+    int dueDate; //fixme Should be type DatePicker - int for now so I can figure out other things
+    //TextField task;
+    String taskDescription; //fixme string for now so I can figure out other things
+
+
+   /* private SimpleBooleanProperty done;
     private SimpleStringProperty dueDate;
     private SimpleStringProperty task;
 
@@ -15,5 +23,6 @@ public class Task {
         this.dueDate = new SimpleStringProperty(dueDate);
         this.task = new SimpleStringProperty(task);
     }
+    */
 
 }
